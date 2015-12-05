@@ -1,1 +1,16 @@
-/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like 
+
+.header .cell {
+  background-color:lightgrey;
+  border: solid 1px grey;
+}
+*/
+
+.cell, .cell1 {
+	float:left;
+	padding: 2px;
+}
+
+.cell1:first-child{
+	font-weight: bold;
+}

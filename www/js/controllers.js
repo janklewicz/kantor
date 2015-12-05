@@ -1,6 +1,28 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
+  $scope.getHurt = function(){
+
+    $.ajax(
+            {
+                url: "http://www.kantor-polres.home.pl/kantor-polres/paneltv-ajax2015.php",
+                success: function(result){
+                  //var html = result.replace(/<div class="row">/g, '<div class="item item-divider">');
+                  //$(".data").html(html);
+
+                  var html = $(result);
+
+                  $.each(html, function(i, val){
+                    console.log($('.cell1', val).text());
+                  });
+                },
+                error: function(p1){
+                  console.log(p1);
+                }
+            }
+    );
+  }
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
