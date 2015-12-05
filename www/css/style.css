@@ -4,13 +4,290 @@
   background-color:lightgrey;
   border: solid 1px grey;
 }
+
+.img_flaga {
+	padding-right: 6px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+}
+
+.tableHeader {
+  font-weight: bold;
+}
+
+.tableHeader1 {
+  font-weight: bold;
+}
+
+.tableHeader2 {
+  font-weight: bold;
+  text-align: right;
+  line-height: 13px;
+}
+
+.tableHeaderBig {
+  font-weight: bold;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.tableHeader1Big1 {
+  font-weight: bold;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.tableHeader2Big2 {
+  font-weight: bold;
+  text-align: right;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.row1Big {
+  background: #F8F9FC;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.row2Big {
+  background: #E4E9ED;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.row1 {
+  background: #ffffff;
+  line-height: 18px;
+}
+
+.row2 {
+  background: #f1f1f1;
+  line-height: 18px;
+}
+
+.walutaTable {
+  color: #333333;
+  
+  font-size: 11px;
+  text-align: left;
+  line-height: 16px;
+  margin-left: 7px;
+}
+
+.bilonTable {
+  color: #333333;
+  
+  font-size: 11px;
+  text-align: left;
+  line-height: 16px;
+  margin-left: 7px;
+}
+
+
+
+
+
+.box1 { 
+  width: 404px;
+  float: left;
+  background-color: #F8F9FC;
+  }
+
+.box2 { 
+  width: 224px;
+  float: left;
+  background-color: #F8F9FC;
+  }
+
+.box3 { 
+  width: 300px;
+  float: left;
+  background-color: #F8F9FC;
+  }
+
+.box4 { 
+  width: 100%;
+  float: left;
+  background-color: #F8F9FC;
+  }
+    
+.space { 
+  width: 10px;
+  float: left;
+  background-color: #fff;
+  }
+    
+#lewa { 
+ 
+  float: left;
+  width:100%;
+  
+  font-size: 11px;
+  }
+
+#lewa-duze { 
+  width: 300px;  
+  float: left;
+  margin-left: 10px;
+  color: #000000;
+  font-size: 11px;
+  }
+  
+#prawa { 
+  width: 650px;  
+  float: left;
+  color: #000000;
+  font-size: 11px;
+  margin-left: 10px;
+  }
+
+#prawa-duze { 
+  width: 680px;  
+  float: left;
+  color: #000000;
+  font-size: 11px;
+  margin-left: 10px;
+  }
+    
+#prawa1 { 
+  width: 650px;
+  height: 157px;
+  float: left;
+  color: #000000;
+  font-size: 11px;
+  }
+   
+.newsy { 
+  width: 100%;
+  float: left;
+  }
+
+#tresc {
+  width: 100%; 
+  float: left;
+  background-color: #fff;
+  padding-bottom: 15px;
+  }
+  
+  
+  
+#duzekursy { 
+  width: 680px;
+  float: left;
+  padding-top: 0px;
+  }
+  
+#prawa2 { 
+  width: 650px;
+  float: left;
+  color: #000000;
+  font-size: 11px;
+  } 
+  
+
+
+#prawa3 { 
+  width: 200px;
+  float: left;
+  padding-top: 10px;
+  color: #000000;
+  font-size: 11px;
+  }   
+  
+#prawa4 { 
+  width: 300px;
+  float: left;
+  padding: 0px;
+  color: #000000;
+  font-size: 11px;
+  }    
+
+#wykresy { 
+  width: 1000px;
+  height: 180px;
+  padding-top:55px;
+  float: left;
+  background-image:url('zdj/tlo-wykresy.gif');
+  background-repeat: no-repeat;
+  }   
+
+#webmania { 
+  width: 960px; 
+  text-align: right;
+  float: left;
+  padding: 20px;  
+  background-color: #fff;
+  }
+
+
+
 */
 
-.cell, .cell1 {
-	float:left;
-	padding: 2px;
+.row {
+    font-size: 11px;
+  	line-height: 16px;
+  	margin-left: 7px;
 }
 
-.cell1:first-child{
-	font-weight: bold;
+.date{
+	display: none;
 }
+
+div.row:nth-child(even) {background: #fff;}
+
+div.row:nth-child(odd) {background: #f1f1f1;}
+
+.row:first-child, :not(.cell) + .cell {
+	font-weight: normal;
+	text-align: center;
+}
+
+.cell {
+	font-weight: bold;
+    float:left;    
+    width:18%;
+    margin:0;
+    padding:0.5%;
+}
+
+.cell1 {
+    float:left;
+    padding:0.5%;
+    width:50%;
+    text-align: left;
+}
+
+.bold {
+    font-weight:bold;
+}
+
+.clear {
+    clear:both;
+}
+
+h5{
+	display: none;
+}
+
+.row1 {
+  background: #f1f1f1;
+  line-height: 6px;
+ 
+}
+
+.row2 {
+  background: #f1f1f1;
+  line-height: 6px;
+}
+
+
+/*
+.img2 {
+  border: 0px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+*/

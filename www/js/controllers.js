@@ -5,16 +5,10 @@ angular.module('starter.controllers', [])
 
     $.ajax(
             {
-                url: "http://www.kantor-polres.home.pl/kantor-polres/paneltv-ajax2015.php",
+                url: "http://www.kantor-polres.home.pl/kantor-polres/kursy_wp.php",
                 success: function(result){
-                  //var html = result.replace(/<div class="row">/g, '<div class="item item-divider">');
-                  //$(".data").html(html);
-
                   var html = $(result);
-
-                  $.each(html, function(i, val){
-                    console.log($('.cell1', val).text());
-                  });
+                  $(".hurtDiv").html(html);
                 },
                 error: function(p1){
                   console.log(p1);
@@ -22,6 +16,10 @@ angular.module('starter.controllers', [])
             }
     );
   }
+  $scope.$on('$ionicView.enter', function(e) {
+    $scope.getHurt();
+  });
+
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
@@ -33,10 +31,49 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+ $scope.getDetal = function(){
+
+    $.ajax(
+            {
+                url: "http://www.kantor-polres.home.pl/kantor-polres/paneltv-ajax2015.php",
+                success: function(result){
+                  //var html = result.replace(/<div class="row">/g, '<div class="item item-divider">');
+                  //$(".data").html(html);
+                  var html = $(result);
+
+                  var attrs = { };
+
+                  $.each($(".cell", html)[0].attributes, function(idx, attr) {
+                      attrs[attr.nodeName] = attr.nodeValue;
+                  });
+
+
+                  $(".cell", html).replaceWith(function () {
+                      attrs.text = $(this).text();
+                      return $("<a />", attrs);
+                  });
+
+                  console.log($('.cell1', html).val());
+
+
+                  $.each(html, function(i, val){
+                    //console.log(val);
+                  });
+
+                  $(".detalDiv").html(html);
+                },
+                error: function(p1){
+                  console.log(p1);
+                }
+            }
+        );
+  }
+
+
+  $scope.$on('$ionicView.enter', function(e) {
+    $scope.getDetal();
+  });
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
