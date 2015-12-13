@@ -282,12 +282,10 @@ h5{
   line-height: 6px;
 }
 
-
-/*
-.img2 {
-  border: 0px;
-  margin-bottom: 3px;
-  margin-left: 0px;
-  margin-right: 5px;
+.ion-ios-calculator{
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
-*/
